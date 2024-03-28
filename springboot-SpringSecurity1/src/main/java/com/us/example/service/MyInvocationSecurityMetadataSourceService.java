@@ -10,6 +10,7 @@ import org.springframework.security.web.access.intercept.FilterInvocationSecurit
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
@@ -20,7 +21,7 @@ import java.util.*;
 public class MyInvocationSecurityMetadataSourceService  implements
         FilterInvocationSecurityMetadataSource {
 
-    @Autowired
+    @Resource
     private PermissionDao permissionDao;
 
     private HashMap<String, Collection<ConfigAttribute>> map =null;
